@@ -25,6 +25,10 @@ class Advanced_Ads_Page_Impression
 	
 	// place all WP actions
 	private function __construct() {
+	    
+		// allow to override method using the ADVANCED_ADS_TRACKING_DEBUG_METHOD constant
+		$this->method = defined( 'ADVANCED_ADS_TRACKING_DEBUG_METHOD' ) ? ADVANCED_ADS_TRACKING_DEBUG_METHOD : $this->method;
+	    
 		if ( !in_array( $this->method, array( 'PHP', 'JS', 'ALL' ) ) ) {
 			$this->method = 'JS';
 		}
