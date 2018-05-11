@@ -1,0 +1,1 @@
+;(function($){$(function(){$.ajax({type:'post',url:advancedAdsPageviewUrl,data:{action:'advanced_ads_pageview',url:document.URL},})})})(window.jQuery);
